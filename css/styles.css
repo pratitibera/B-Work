@@ -161,7 +161,14 @@ tbody td {
 	text-transform: uppercase;
 	text-align: center;
 }
-
+.wrapper .title2 {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 25px;
+	margin-top: 55px;
+	color: #000000;
+	text-transform: uppercase;
+}
 .wrapper .form {
 	width: 100%;
 }
@@ -217,7 +224,8 @@ tbody td {
 	-moz-appearance: none;
 	appearance: none;
 	outline: none;
-	width: 100%;
+	width: 102%;
+	margin-left: -2%;
 	height: 100%;
 	border: 0px;
 	padding: 8px 10px;
