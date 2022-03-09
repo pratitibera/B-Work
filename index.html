@@ -7,22 +7,21 @@
       <link rel="stylesheet" href="css/styles.css">
    </head>
    <body>
-      <div id="english">
-         <div class="wrapper">
-            <div class="title">
-               B-WORK SERVICE
-            </div>
-            <div class="form">
-               <div class="inputfield">
-                  <label>Select Language</label>
-                  <div class="custom_select">
-                     <select>
-                        <option value="">Select</option>
-                        <option value="English">English</option>
-                        <option value="Hindi">Hindi</option>
-                     </select>
-                  </div>
+      <div class="wrapper">
+         <div class="title">
+            B-WORK SERVICE
+         </div>
+         <div class="form">
+            <div class="inputfield">
+               <label>Select Language</label>
+               <div class="custom_select">
+                  <select onchange="changeLanguage(this.value);">
+                     <option value="English" selected>English</option>
+                     <option value="Hindi">Hindi</option>
+                  </select>
                </div>
+            </div>
+            <div id="english">
                <div class="title2">
                   PERSONAL DETAILS
                </div>
@@ -103,19 +102,47 @@
                </div>
                <div class="inputfield">
                   <label>Aadhar Card Image</label>
-                  <input type="file" class="input">
+                  <input type="file" class="input" id="ee_aadhar">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="e_aadhar">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>Uploaded successfully</p>
                </div>
                <div class="inputfield">
                   <label>Pan Card Image</label>
-                  <input type="file" class="input">
+                  <input type="file" class="input" id="ee_pan">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="e_pan">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>Uploaded successfully</p>
                </div>
                <div class="inputfield">
                   <label>Driving License Image</label>
-                  <input type="file" class="input">
+                  <input type="file" class="input" id="ee_driving">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="e_driving">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>Uploaded successfully</p>
                </div>
                <div class="inputfield">
                   <label>Passport Image</label>
-                  <input type="file" class="input">
+                  <input type="file" class="input" id="ee_passport">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="e_passport">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>Uploaded successfully</p>
                </div>
                <div class="title2">
                   BANK DETAILS
@@ -138,88 +165,197 @@
                </div>
                <div class="inputfield">
                   <label>Upload Passbook</label>
-                  <input type="file" class="input">
+                  <input type="file" class="input" id="ee_passbook">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="e_passbook">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>Uploaded successfully</p>
                </div>
                <div class="inputfield">
                   <input type="submit" value="SUBMIT" class="btn">
                </div>
             </div>
-         </div>
-      </div>
-      <div id="hindi">
-         <div class="wrapper">
-            <div class="title">
-               B-WORK SERVICE
-            </div>
-            <div class="form">
+            <div id="hindi">
+               <div class="title2">
+                  व्यक्तिगत विवरण
+               </div>
                <div class="inputfield">
-                  <label>Name</label>
+                  <label>पूरा नाम</label>
                   <input type="text" class="input">
                </div>
                <div class="inputfield">
-                  <label>Email Address</label>
+                  <label>ईमेल पता</label>
                   <input type="text" class="input">
                </div>
                <div class="inputfield">
-                  <label>Phone Number</label>
-                  <input type="text" class="input">
-               </div>
-               <div class="inputfield">
-                  <label>Password</label>
-                  <input type="password" class="input">
-               </div>
-               <div class="inputfield">
-                  <label>Address</label>
-                  <textarea class="textarea"></textarea>
-               </div>
-               <div class="inputfield">
-                  <label>Photo</label>
-                  <input type="file" class="input">
-               </div>
-               <div class="inputfield">
-                  <label>State</label>
+                  <label>आप क्या करते हैं?</label>
                   <div class="custom_select">
                      <select>
-                        <option value="">Select</option>
-                        <option value="West Bengal">West Bengal</option>
-                        <option value="Bihar">Bihar</option>
+                        <option value="">चुनते हैं</option>
+                        <option value="Electrician">बिजली मिस्त्री</option>
+                        <option value="Plumber">नलसाज</option>
+                        <option value="Carpenter">बढ़ई</option>
+                        <option value="House painter">घर चित्रकार</option>
+                        <option value="Rajmistri">राजमिस्त्री</option>
+                        <option value="Labour">श्रम</option>
+                        <option value="Tiles mistri">टाइलें मिस्त्री</option>
+                        <option value="Pop mistri">पॉप का रहस्य</option>
+                        <option value="Welder">वेल्डर</option>
+                        <option value="Steel mistri">स्टील मिस्त्री</option>
+                        <option value="AC technician">एसी तकनीशियन</option>
+                        <option value="Regrigerator Technician">रेफ्रिजरेटर तकनीशियन</option>
+                        <option value="TV Technician">टीवी तकनीशियन</option>
+                        <option value="Washing Machine Technician">वॉशिंग मशीन तकनीशियन</option>
+                        <option value="CCTV Technician">सीसीटीवी तकनीशियन</option>
+                        <option value="RO Water Technician">आरओ वाटर टेक्निशियन</option>
+                        <option value="Architect">वास्तुकार</option>
+                        <option value="Home Designer">होम डिज़ाइनर</option>
+                        <option value="Civit Engineer">सिविल अभियंता</option>
                      </select>
                   </div>
                </div>
                <div class="inputfield">
-                  <label>City</label>
+                  <label>राज्य</label>
                   <div class="custom_select">
                      <select>
-                        <option value="">Select</option>
-                        <option value="Kolkata">Kolkata</option>
-                        <option value="Kharagpur">Kharagpur</option>
+                        <option value="">चुनते हैं</option>
+                        <option value="West Bengal">पश्चिम बंगाल</option>
+                        <option value="Bihar">बिहार</option>
                      </select>
                   </div>
                </div>
                <div class="inputfield">
-                  <label>Postal Code</label>
+                  <label>शहर</label>
+                  <div class="custom_select">
+                     <select>
+                        <option value="">चुनते हैं</option>
+                        <option value="Kolkata">कोलकाता</option>
+                        <option value="Kharagpur">खड़गपुर</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="title2">
+                  संपर्क विवरण
+               </div>
+               <div class="inputfield">
+                  <label>फ़ोन नंबर</label>
                   <input type="text" class="input">
                </div>
                <div class="inputfield">
-                  <label>Aadhar Card Image</label>
-                  <input type="file" class="input">
+                  <input type="submit" value="OTP भेजें" class="btn">
                </div>
                <div class="inputfield">
-                  <label>Pan Card Image</label>
-                  <input type="file" class="input">
+                  <label>ओटीपी दर्ज करें</label>
+                  <input type="text" class="input">
                </div>
                <div class="inputfield">
-                  <label>GST Certificate Image</label>
-                  <input type="file" class="input">
+                  <input type="submit" value="ओटीपी सत्यापित करें" class="btn">
+               </div>
+               <div class="title2">
+                  दस्तावेजों
                </div>
                <div class="inputfield">
-                  <input type="submit" value="ADD VENDOR" class="btn">
+                  <label>आधार कार्ड इमेज</label>
+                  <input type="file" class="input" id="hh_aadhar">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="h_aadhar">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>सफलतापूर्वक अपलोड किया गया</p>
+               </div>
+               <div class="inputfield">
+                  <label>पैन कार्ड छवि</label>
+                  <input type="file" class="input" id="hh_pan">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="h_pan">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>सफलतापूर्वक अपलोड किया गया</p>
+               </div>
+               <div class="inputfield">
+                  <label>ड्राइविंग लाइसेंस छवि</label>
+                  <input type="file" class="input" id="hh_driving">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="h_driving">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>सफलतापूर्वक अपलोड किया गया</p>
+               </div>
+               <div class="inputfield">
+                  <label>पासपोर्ट छवि</label>
+                  <input type="file" class="input" id="hh_passport">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="h_passport">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>सफलतापूर्वक अपलोड किया गया</p>
+               </div>
+               <div class="title2">
+                  बैंक विवरण
+               </div>
+               <div class="inputfield">
+                  <label>बैंक खाता संख्या</label>
+                  <input type="text" class="input">
+               </div>
+               <div class="inputfield">
+                  <label>आईएफएससी कोड</label>
+                  <input type="text" class="input">
+               </div>
+               <div class="inputfield">
+                  <label>शाखा का नाम</label>
+                  <input type="text" class="input">
+               </div>
+               <div class="inputfield">
+                  <label>खाता धारक का नाम</label>
+                  <input type="text" class="input">
+               </div>
+               <div class="inputfield">
+                  <label>पासबुक अपलोड करें</label>
+                  <input type="file" class="input" id="hh_passbook">
+               </div>
+               <div class="inputfield terms">
+                  <label class="check">
+                  <input type="checkbox" id="h_passbook">
+                  <span class="checkmark"></span>
+                  </label>
+                  <p>सफलतापूर्वक अपलोड किया गया</p>
+               </div>
+               <div class="inputfield">
+                  <input type="submit" value="प्रस्तुत" class="btn">
                </div>
             </div>
          </div>
       </div>
-      <!-- <script>
-         func
-      </script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+         function changeLanguage(value){
+            if(value == "English"){
+               document.getElementById('hindi').style.display = "none";
+               document.getElementById('english').style.display = "block";
+            }
+            else{
+               document.getElementById('hindi').style.display = "block";
+               document.getElementById('english').style.display = "none";
+            }
+         }
+         $(document).ready(function(){
+           $('input[type="file"]').change(function(){
+            var id = $(this).attr('id');
+            id = id.substring(1,id.length)
+            $("#" + id).attr('checked', true);
+           });
+         });
+      </script>
    </body>
 </html>
